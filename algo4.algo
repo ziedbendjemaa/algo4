@@ -1,0 +1,24 @@
+PROCEDURE swap(x,y: INTEGER)
+VAR
+    i,j , n: INTEGER
+    z:INTEGER;
+BEGIN
+    z:=x
+    x:=y
+    y:=z
+END
+ALGORITHM comparaison
+VAR
+tab : ARRAY_OF INTEGER[];
+
+BEGIN
+    READ(tab)
+    n=tab.length-1
+    FOR i FROM 0 TO n STEP 1  DO
+        j:=i;
+        WHILE (j>0 and tab[j]>tab[j-1]) DO
+            swap (tab[i] , tab[j])
+            j=j-1;
+        END_WHILE
+    END_FOR
+END
