@@ -17,7 +17,7 @@ BEGIN
     FOR i FROM 0 TO n STEP 1  DO
         j:=i;
         WHILE (j>0 and tab[j]>tab[j-1]) DO
-            swap (tab[i] , tab[j])
+            swap (tab[j] , tab[j-1])
             j=j-1;
         END_WHILE
     END_FOR
